@@ -64,7 +64,7 @@ public class NicknameServlet extends HttpServlet {
    * Returns the nickname of the user with id,
    * or empty String if the user has not set a nickname.
    */
-  public String getUserNickname(String id){
+  private String getUserNickname(String id){
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     Query query = new Query("UserInfo")
         .setFilter(new Query.FilterPredicate("id", Query.FilterOperator.EQUAL, id));
