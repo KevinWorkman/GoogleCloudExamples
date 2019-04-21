@@ -21,4 +21,3 @@ mvn clean compile exec:java
 ```
 
 Learn more at [HappyCoding.io/tutorials/google-cloud/natural-language](https://happycoding.io/tutorials/google-cloud/natural-language).
-
