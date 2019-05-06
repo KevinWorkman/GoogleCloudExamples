@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Unix Time</title>
+    <script>
+      function requestUnixTime() {
+        const resultContainer = document.getElementById('result');
+        resultContainer.innerText = 'Loading...';
+
+        fetch('/time') // request data from the server
+        .then(response => response.text()) // convert the response to raw text
+        .then((unixTime) => {
+          resultContainer.innerText = unixTime; // build the HTML of the page
+        });
+      }
+    </script>
+  </head>
+  <body onload="requestUnixTime();">
+    <h1>Unix Time</h1>
+    <p>Current Unix time: <span id="result"></span></p>
+    <p>(<a href="">Refresh</a>)</p>
+  </body>
+</html>
