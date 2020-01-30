@@ -1,5 +1,13 @@
 This project uses Blobstore to allow the user to upload an image.
 
+To try this project, run this command:
+
+```
+mvn appengine:devserver
+```
+
+And then navigate to `http://localhost:8080/home`.
+
 ![form](screenshot-1.png)
 
 ![uploaded image](screenshot-2.png)
